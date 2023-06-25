@@ -1,0 +1,17 @@
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\bin\Debug\SurveryConfigurator.exe.config
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\bin\Debug\SurveryConfigurator.exe
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\bin\Debug\SurveryConfigurator.pdb
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveryConfigurator.csproj.AssemblyReference.cache
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveryConfigurator.csproj.SuggestedBindingRedirects.cache
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveryConfigurator.Properties.Resources.resources
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveryConfigurator.csproj.GenerateResource.cache
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveryConfigurator.csproj.CoreCompileInputs.cache
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveryConfigurator.exe
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveryConfigurator.pdb
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveyConfigurator.QuestionUCs.UC_questionSlider.resources
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveyConfigurator.UC_questionStars.resources
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveyConfigurator.HomePage.resources
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveyConfigurator.Tabs.UC_Create.resources
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveyConfigurator.Tabs.UC_Help.resources
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveyConfigurator.Tabs.UC_Home.resources
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveyConfigurator.UC_questionSmiley.resources
