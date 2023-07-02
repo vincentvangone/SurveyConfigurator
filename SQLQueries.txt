@@ -1,0 +1,123 @@
+PRINT N'Creating SurveyConfigurator...';  
+GO  
+CREATE SCHEMA [SurveyConfigurator]  
+    AUTHORIZATION [dbo];  
+GO  
+PRINT N'Creating SurveyConfigurator.Question...';  
+GO  
+CREATE TABLE [SurveyConfigurator].[Question] (  
+    [QuestionID]   INT   IDENTITY (1, 1) NOT NULL,  
+    [QuestionText] VARCHAR(1000) NOT NULL,  
+    [QuestionType]    VARCHAR (20)   NOT NULL,  
+    
+);  
+GO  
+PRINT N'Creating SurveyConfigurator.QuesSmiley...';  
+GO  
+CREATE TABLE [SurveyConfigurator].[QuesSmiley] (  
+    [QuestionID] INT      NOT NULL,  
+    [noOfSmileys]     INT      NOT NULL  
+);  
+GO  
+PRINT N'Creating SurveyConfigurator.QuesStars...';  
+GO  
+CREATE TABLE [SurveyConfigurator].[QuesStars] (  
+    [QuestionID] INT      NOT NULL,  
+    [noOfStars]     INT      NOT NULL  
+);  
+GO  
+PRINT N'Creating SurveyConfigurator.QuesSlider...';  
+GO  
+CREATE TABLE [SurveyConfigurator].[QuesSlider] (  
+    [QuestionID] INT      NOT NULL,  
+    [startValue]     INT      NOT NULL ,
+    [endValue]     INT      NOT NULL ,
+    [startCaption]   VARCHAR(50)      NOT NULL ,
+    [endCaption]   VARCHAR(50)     NOT NULL
+);  
+GO  
+PRINT N'Creating SurveyConfigurator.PK_Question_QuestionID...';  
+GO  
+ALTER TABLE [SurveyConfigurator].[Question]  
+    ADD CONSTRAINT [PK_Question_QuestionID] PRIMARY KEY CLUSTERED ([QuestionID] ASC) WITH (ALLOW_PAGE_LOCKS = ON, ALLOW_ROW_LOCKS = ON, PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF, STATISTICS_NORECOMPUTE = OFF);  
+GO  
+PRINT N'Creating [FK_QuesSmiley_Question_QuestionID]...';  
+GO  
+ALTER TABLE [SurveyConfigurator].[QuesSmiley]  
+    ADD CONSTRAINT [FK_QuesSmiley_Question_QuestionID] FOREIGN KEY ([QuestionID]) REFERENCES [SurveyConfigurator].[Question] ([QuestionID]) ON DELETE NO ACTION ON UPDATE NO ACTION;  
+GO  
+PRINT N'Creating [FK_QuesStars_Question_QuestionID]...';  
+GO  
+ALTER TABLE [SurveyConfigurator].[QuesStars]  
+    ADD CONSTRAINT [FK_QuesStars_Question_QuestionID] FOREIGN KEY ([QuestionID]) REFERENCES [SurveyConfigurator].[Question] ([QuestionID]) ON DELETE NO ACTION ON UPDATE NO ACTION;  
+GO  
+PRINT N'Creating [FK_QuesSlider_Question_QuestionID]...';  
+GO  
+ALTER TABLE [SurveyConfigurator].[QuesSlider]  
+    ADD CONSTRAINT [FK_QuesSlider_Question_QuestionID] FOREIGN KEY ([QuestionID]) REFERENCES [SurveyConfigurator].[Question] ([QuestionID]) ON DELETE NO ACTION ON UPDATE NO ACTION;  
+GO  
+PRINT N'Creating SurveyConfigurator.Question...';  
+GO  
+CREATE PROCEDURE [SurveyConfigurator].[insertQuestion] 
+@QuestionText VARCHAR (1000),  
+@QuestionType VARCHAR(20)  ,
+@QuestionID INT OUTPUT
+AS  
+BEGIN  
+INSERT INTO [SurveyConfigurator].[Question] (QuestionText,QuestionType) VALUES (@QuestionText,@QuestionType);  
+SET @QuestionID = SCOPE_IDENTITY();  
+RETURN @@ERROR  
+END 
+GO  
+PRINT N'Creating SurveyConfigurator.QuestionSmiley...'; 
+GO  
+CREATE PROCEDURE [SurveyConfigurator].[insertQuestionSmiley]
+@QuestionID INT, 
+@noOfSmileys INT  
+AS  
+BEGIN  
+--RC = return counter
+DECLARE @RC INT 
+INSERT INTO  [SurveyConfigurator].[QuesSmiley] (QuestionID, noOfSmileys)   
+     VALUES (@QuestionID, @noOfSmileys)  
+SELECT @RC = SCOPE_IDENTITY();
+RETURN @RC  
+END  
+GO  
+PRINT N'Creating SurveyConfigurator.QuestionStar...'; 
+GO  
+CREATE PROCEDURE [SurveyConfigurator].[insertQuestionStar]
+@QuestionID INT, 
+@noOfStars INT  
+AS  
+BEGIN  
+--RC = return counter
+DECLARE @RC INT 
+INSERT INTO  [SurveyConfigurator].[QuesStars] (QuestionID, noOfStars)   
+     VALUES (@QuestionID, @noOfStars)  
+SELECT @RC = SCOPE_IDENTITY();
+RETURN @RC  
+END  
+GO   
+PRINT N'Creating SurveyConfigurator.QuestionSlider...'; 
+GO  
+CREATE PROCEDURE [SurveyConfigurator].[insertQuestionSlider]
+@QuestionID INT, 
+@startValue INT,
+@endValue INT ,
+@startCaption VARCHAR(50),
+@endCaption VARCHAR(50)
+
+AS  
+BEGIN  
+--RC = return counter
+DECLARE @RC INT 
+INSERT INTO  [SurveyConfigurator].[QuesSlider] (QuestionID, startValue , endValue , startCaption, endCaption)   
+     VALUES (@QuestionID, @startValue , @endValue , @startCaption, @endCaption)  
+SELECT @RC = SCOPE_IDENTITY();
+RETURN @RC  
+END  
+GO  
+   
+  
+  

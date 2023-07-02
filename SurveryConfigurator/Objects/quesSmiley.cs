@@ -11,6 +11,11 @@ namespace SurveryConfigurator.Objects
         private int noOfSmileys;
 
 
+        public quesSmiley(int noOfSmileysPara = 5)
+        {
+            noOfSmileys = noOfSmileysPara;
+        }
+
         //public methods for noOfSmileys to be altered outside of the class
         public int NoOfSmileys
         {
@@ -22,17 +27,13 @@ namespace SurveryConfigurator.Objects
             {
                 if (value > 5 || value <2)
                 {
-                    throw new ArgumentOutOfRangeException(nameof(value), value, $"{nameof(noOfSmileys)} must be between 2 and 5.");
+                    throw new ArgumentOutOfRangeException("Please select number of smileys");
                 }
                 noOfSmileys = value;
             }
         }
 
 
-        //constructor
-        //public quesSmiley(string quesText,string quesType, int noOfSmileys) :base(quesText, quesType)
-        //{
-        //    NoOfSmileys=noOfSmileys;
-        //}
+        
     }
 }

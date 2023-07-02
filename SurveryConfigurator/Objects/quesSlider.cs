@@ -14,6 +14,13 @@ namespace SurveryConfigurator.Objects
         private string startCaption;
         private string endCaption;
 
+        //constructor with default values
+        public quesSlider(string startCaption = "min", string endCaption = "max", int startValue = 0, int endValue = 100) 
+        {
+            StartValue = startValue;
+            EndValue=endValue;
+        }
+
 
         //public setters and getters
         public int StartValue{
@@ -63,7 +70,7 @@ namespace SurveryConfigurator.Objects
             {
                 if (value == "")
                 {
-                    throw new ArgumentOutOfRangeException(nameof(value), value, $"{nameof(startCaption)} must be a valid string.");
+                    throw new ArgumentNullException("Start caption must be a valid string.");
                 }
                 if (value.Length>50)
                 {
@@ -84,7 +91,7 @@ namespace SurveryConfigurator.Objects
             {
                 if (value == "")
                 {
-                    throw new ArgumentOutOfRangeException(nameof(value), value, $"{nameof(endCaption)} must be a valid string.");
+                    throw new ArgumentNullException("End caption must be a valid string.");
                 }
                 if (value.Length > 50)
                 {
@@ -99,11 +106,7 @@ namespace SurveryConfigurator.Objects
             }
         }
 
-       // public quesSlider(string quesText, string quesType, int startValue=0,int endValue=100, string startCaption="min", string endCaption="max") : base(quesText, quesType)
-       // {
-       //     StartValue = startValue;
-       //
-       // }
+       
 
     }
 }

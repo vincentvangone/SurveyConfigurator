@@ -10,20 +10,22 @@ namespace SurveryConfigurator.Objects
     {
 
         //private variable for code security
+        
         private string quesText;
         private string quesType;
 
 
-        //constructor calls setters
-        //public Question(string quesText, string quesType)
-        //{
-        //   QuesText = quesText;
-        //    QuesType = quesType;
-    
-        //}
+        //constructor initializes to invalid values to make sure theyre switched
+        public Question(string quesTextt="", string quesTypee="")
+        {
+           quesType= quesTypee;
+           quesText= quesTextt;
 
 
-        //public setter and getter for variables to be treated like public
+        }
+
+
+        //public setter and getter for variables to be altered/retrieved out of class
         public string QuesText
         {
             get
@@ -32,9 +34,9 @@ namespace SurveryConfigurator.Objects
             }
             set
             {
-                if(value == null)
+                if(value == "")
                 {
-                    throw new ArgumentOutOfRangeException(nameof(value), value, $"{nameof(quesText)} must be a valid string.");
+                    throw new ArgumentNullException("Question text, must be a valid string.");
                 }
                 quesText = value;
             }

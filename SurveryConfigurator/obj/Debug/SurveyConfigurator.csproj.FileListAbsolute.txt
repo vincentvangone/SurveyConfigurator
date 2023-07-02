@@ -15,3 +15,5 @@ C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug
 C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\bin\Debug\SurveryConfigurator.exe.config
 C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\bin\Debug\SurveryConfigurator.exe
 C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\bin\Debug\SurveryConfigurator.pdb
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveryConfigurator.Tabs.UC_View.resources
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveryConfigurator.Tabs.UC_Edit.resources

@@ -6,9 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SurveryConfigurator.Tabs;
 using System.Windows.Forms;
 using System.Drawing.Text;
 using SurveyConfigurator.Tabs;
+
 
 namespace SurveyConfigurator
 {
@@ -51,13 +53,15 @@ namespace SurveyConfigurator
         //"view"  click -> display show all questions page 
         private void buttonNavView_Click(object sender, EventArgs e)
         {
-
+            UC_View ucView = new UC_View();
+            addUserControls(ucView);
         }
 
         //"edit"  click -> display edit all questions page 
         private void buttonNavEdit_Click(object sender, EventArgs e)
         {
-
+            UC_Edit ucEdit = new UC_Edit();
+            addUserControls (ucEdit);
         }
 
         //"help"  click -> display help page 

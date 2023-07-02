@@ -16,72 +16,73 @@ namespace SurveyConfigurator
 {
     public partial class UC_questionStars : UserControl
     {
-
+        quesStars RefQuestion;
         private int NoOfStars { get; set; }
         
-        public UC_questionStars()
+        public UC_questionStars(ref quesStars question)
         {
             InitializeComponent();
+            RefQuestion = question;
         }
 
 
         //methods to set the number of stars depending on the user's choice 
         private void pictureStar10_Click(object sender, EventArgs e)
         {
-            NoOfStars = 10;
+            RefQuestion.NoOfStars = 10;
             resizeStars(10);
         }
         private void pictureStar9_Click(object sender, EventArgs e)
         {
-            NoOfStars = 9;
+            RefQuestion.NoOfStars = 9;
             resizeStars(9);
         }
         private void pictureStar8_Click(object sender, EventArgs e)
         {
-            NoOfStars = 8;
+            RefQuestion.NoOfStars = 8;
             resizeStars(8);
         }
         private void pictureStar7_Click(object sender, EventArgs e)
         {
-            NoOfStars = 7;
+            RefQuestion.NoOfStars = 7;
             resizeStars(7);
         }
         private void pictureStar6_Click(object sender, EventArgs e)
         {
-            NoOfStars = 6;
+            RefQuestion.NoOfStars = 6;
             resizeStars(6);
         }
         private void pictureStar5_Click(object sender, EventArgs e)
         {
-            NoOfStars = 5;
+            RefQuestion.NoOfStars = 5;
             resizeStars(5);
         }
         private void pictureStar4_Click(object sender, EventArgs e)
         {
-            NoOfStars = 4;
+            RefQuestion.NoOfStars = 4;
             resizeStars(4);
         }
         private void pictureStar3_Click(object sender, EventArgs e)
         {
-            NoOfStars = 3;
+            RefQuestion.NoOfStars = 3;
             resizeStars(3);
         }
         private void pictureStar2_Click(object sender, EventArgs e)
         {
-            NoOfStars = 2;
+            RefQuestion.NoOfStars = 2;
             resizeStars(2);
         }
         private void pictureStar1_Click(object sender, EventArgs e)
         {
-            NoOfStars = 1;
+            RefQuestion.NoOfStars = 1;
             resizeStars(1);
         }
 
-        //to prevent repetitive code, i added a method that receives the number of stars to resize them
+        // to prevent repetitive code, i added a method that receives the number of stars to resize them
         // make n stars bigger and 10-n smaller 
         private void resizeStars(int n)
         {
-            comboBoxNoOfStars.SelectedIndex = NoOfStars-1;
+            comboBoxNoOfStars.SelectedIndex = n-1;
 
             if (n >= 1) 
             {

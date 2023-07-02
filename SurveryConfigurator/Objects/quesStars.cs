@@ -8,8 +8,18 @@ namespace SurveryConfigurator.Objects
 {
     public class quesStars : Question
     {
+        //only additional variable is no of stars
         private int noOfStars;
 
+
+        //constructor
+        public quesStars(int noOfStars = 5) 
+        {
+            NoOfStars = noOfStars;
+        }
+
+        
+        //setter and getter
         public int NoOfStars
         {
             get
@@ -18,19 +28,12 @@ namespace SurveryConfigurator.Objects
             }
             set
             {
-                if (value == null)
-                {
-                    throw new ArgumentOutOfRangeException(nameof(value), value, $"{nameof(noOfStars)} must be selected.");
-                }
+                //this value is set by default to 5 and the user can only choose one of the given values, no need for validation
                 noOfStars = value;
             }
         }
 
-        //constructor
-        //public quesStars(string quesText, string quesType, int noOfStars) : base(quesText, quesType)
-        //{
-        //    NoOfStars = noOfStars;
-        //}
+        
 
 
     }

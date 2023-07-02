@@ -159,7 +159,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_questionSmiley";
             this.Size = new System.Drawing.Size(1687, 1053);
-            this.Load += new System.EventHandler(this.UC_questionSmiley_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureFace1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFace2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFace3)).EndInit();
