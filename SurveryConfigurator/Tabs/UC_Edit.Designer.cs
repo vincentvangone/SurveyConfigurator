@@ -87,7 +87,7 @@ namespace SurveryConfigurator.Tabs
             this.buttonEditQues.Location = new System.Drawing.Point(350, 127);
             this.buttonEditQues.Name = "buttonEditQues";
             this.buttonEditQues.Padding = new System.Windows.Forms.Padding(5);
-            this.buttonEditQues.Size = new System.Drawing.Size(213, 61);
+            this.buttonEditQues.Size = new System.Drawing.Size(202, 61);
             this.buttonEditQues.TabIndex = 1;
             this.buttonEditQues.Text = "Edit";
             this.buttonEditQues.UseVisualStyleBackColor = true;

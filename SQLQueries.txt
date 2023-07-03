@@ -118,6 +118,67 @@ SELECT @RC = SCOPE_IDENTITY();
 RETURN @RC  
 END  
 GO  
+
+GO  
+PRINT N'Creating SurveyConfigurator.delQuestion...'; 
+GO  
+CREATE PROCEDURE [SurveyConfigurator].[deleteQuestion](
+@QuestionID INT
+)
+
+AS  
+BEGIN 
+
+DELETE FROM  [SurveyConfigurator].[Question] 
+     WHERE [SurveyConfigurator].[Question].QuestionID =@QuestionID  
+
+END  
+ 
+
+GO  
+PRINT N'Creating SurveyConfigurator.delQuestionSmiley...'; 
+GO  
+CREATE PROCEDURE [SurveyConfigurator].[deleteQuestionSmiley](
+@QuestionID INT
+)
+
+AS  
+BEGIN 
+
+DELETE FROM  [SurveyConfigurator].[QuesSmiley] 
+     WHERE [SurveyConfigurator].[QuesSmiley].QuestionID =@QuestionID  
+
+END  
+GO  
+PRINT N'Creating SurveyConfigurator.delQuestionStars...'; 
+GO  
+CREATE PROCEDURE [SurveyConfigurator].[deleteQuestionStars](
+@QuestionID INT
+)
+
+AS  
+BEGIN 
+
+DELETE FROM  [SurveyConfigurator].[QuesStars] 
+     WHERE [SurveyConfigurator].[QuesStars].QuestionID =@QuestionID  
+
+END  
+GO  
+PRINT N'Creating SurveyConfigurator.delQuestionSlider...'; 
+GO  
+CREATE PROCEDURE [SurveyConfigurator].[deleteQuestionSlider](
+@QuestionID INT
+)
+
+AS  
+BEGIN 
+
+DELETE FROM  [SurveyConfigurator].[QuesSlider] 
+     WHERE [SurveyConfigurator].[QuesSlider].QuestionID =@QuestionID  
+
+END  
+GO  
+  
    
   
   

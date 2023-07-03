@@ -21,8 +21,11 @@ namespace SurveyConfigurator
         
         public UC_questionStars(ref quesStars question)
         {
+            
             InitializeComponent();
             RefQuestion = question;
+            NoOfStars = 5;
+            resizeStars(5);
         }
 
 

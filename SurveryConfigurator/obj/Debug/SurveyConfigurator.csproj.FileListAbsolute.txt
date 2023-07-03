@@ -17,3 +17,5 @@ C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\bin\Debug
 C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\bin\Debug\SurveryConfigurator.pdb
 C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveryConfigurator.Tabs.UC_View.resources
 C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveryConfigurator.Tabs.UC_Edit.resources
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveryConfigurator.FormEdit.resources
+C:\Users\nour\Desktop\task one\SurveryConfigurator\SurveryConfigurator\obj\Debug\SurveryConfigurator.temporaryEdit.resources

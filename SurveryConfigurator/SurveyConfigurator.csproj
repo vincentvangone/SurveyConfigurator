@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEdit.Designer.cs">
+      <DependentUpon>FormEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Objects\quesSlider.cs" />
     <Compile Include="Objects\quesStars.cs" />
     <Compile Include="Objects\quesSmiley.cs" />
@@ -111,6 +117,15 @@
     <Compile Include="Tabs\UC_View.Designer.cs">
       <DependentUpon>UC_View.cs</DependentUpon>
     </Compile>
+    <Compile Include="temporaryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="temporaryEdit.Designer.cs">
+      <DependentUpon>temporaryEdit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormEdit.resx">
+      <DependentUpon>FormEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuestionUCs\UC_questionSlider.resx">
       <DependentUpon>UC_questionSlider.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\UC_View.resx">
       <DependentUpon>UC_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="temporaryEdit.resx">
+      <DependentUpon>temporaryEdit.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
